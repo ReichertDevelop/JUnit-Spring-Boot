@@ -1,6 +1,6 @@
 package com.develop.api.resources;
 
-import com.develop.api.domain.User;
+import com.develop.api.domain.Users;
 import com.develop.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ public class UserResources {
     private UserService service;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<User> findById(@PathVariable Integer id) {
+    public ResponseEntity<Users> findById(@PathVariable Integer id) {
         return ResponseEntity.ok().body(service.findById(id));
     }
 }

@@ -1,8 +1,8 @@
 package com.develop.api.service;
 
-import com.develop.api.domain.User;
+import com.develop.api.domain.Users;
 
 public interface UserService {
 
-    User findById(Integer id);
+    Users findById(Integer id);
 }

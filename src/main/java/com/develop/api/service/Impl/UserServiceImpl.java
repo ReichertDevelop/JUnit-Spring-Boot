@@ -1,6 +1,6 @@
 package com.develop.api.service.Impl;
 
-import com.develop.api.domain.User;
+import com.develop.api.domain.Users;
 import com.develop.api.repositories.UserRepository;
 import com.develop.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ public class UserServiceImpl implements UserService {
     private UserRepository repository;
 
     @Override
-    public User findById(Integer id) {
-        Optional<User> obj = repository.findById(id);
+    public Users findById(Integer id) {
+        Optional<Users> obj = repository.findById(id);
         return obj.orElse(null);
     }
 }
