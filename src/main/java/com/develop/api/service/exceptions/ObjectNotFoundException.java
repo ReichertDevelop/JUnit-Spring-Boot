@@ -1,2 +1,8 @@
-package com.develop.api.service.exceptions;public class ObjectNotFoundException {
+package com.develop.api.service.exceptions;
+
+public class ObjectNotFoundException extends RuntimeException {
+
+    public ObjectNotFoundException(String message) {
+        super(message);
+    }
 }

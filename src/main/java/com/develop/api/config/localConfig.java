@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
@@ -21,10 +22,9 @@ public class localConfig {
         Users u1 = new Users(null, "Luiz", "develop@gmail.com", "123");
         Users u2 = new Users(null, "Luana", "luana@gmail.com", "123");
 
-        List<Users> usersList = null;
+        List<Users> usersList = new ArrayList<>();
         usersList.add(u1);
         usersList.add(u2);
-
         repository.saveAll(usersList);
     }
 }
